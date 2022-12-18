@@ -1,0 +1,8 @@
+.item {
+  background-color: white;
+  border-radius: 0.625rem;
+  &--completed {
+    background-color: #171d4d;
+    color: #fff;
+  }
+}
