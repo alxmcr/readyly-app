@@ -11,3 +11,10 @@ export interface ITaskProps {
 export interface ITaskListProps {
   tasks: ITask[];
 }
+
+export enum StatusOperation {
+  PENDING = "pending",
+  SUCCESS = "success",
+  ERROR = "error",
+  IDLE = "idle",
+}
