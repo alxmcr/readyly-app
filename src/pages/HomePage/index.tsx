@@ -1,13 +1,13 @@
-import { ITask } from "../../@types/appTypes";
-import TaskList from "../../components/TaskList";
-import useTasks from "../../hooks/useTasks";
+import AppHeader from "../../components/AppHeader";
+import TaskForm from "../../components/TaskForm";
+import TaskListSection from "../../components/TaskListSection";
 
 export default function HomePage() {
-  const { tasks } = useTasks();
-
   return (
-    <div>
-      <TaskList tasks={tasks} />
+    <div className="home">
+      <AppHeader />
+      <TaskListSection />
+      <TaskForm />
     </div>
   );
 }
