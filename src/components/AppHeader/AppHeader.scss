@@ -4,7 +4,7 @@
   background-color: $secondary;
   color: $light;
   height: 6.5rem;
-  padding: 1.1875rem 1rem;
+  padding: 1.1875rem $element-padding;
   &__day {
     font-style: normal;
     font-weight: 400;

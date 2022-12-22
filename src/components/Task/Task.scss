@@ -1,8 +1,11 @@
-.item {
-  background-color: white;
+@import "../../variables";
+
+.task {
+  background-color: $light;
   border-radius: 0.625rem;
+  height: 2.125rem;
   &--completed {
-    background-color: #171d4d;
-    color: #fff;
+    background-color: $secondary;
+    color: $light;
   }
 }
