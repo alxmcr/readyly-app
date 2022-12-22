@@ -1,5 +1,5 @@
 import AppHeader from "../../components/AppHeader";
-import TaskForm from "../../components/TaskForm";
+import TaskFormSection from "../../components/TaskFormSection";
 import TaskListSection from "../../components/TaskListSection";
 
 export default function HomePage() {
@@ -7,7 +7,7 @@ export default function HomePage() {
     <div className="home">
       <AppHeader />
       <TaskListSection />
-      <TaskForm />
+      <TaskFormSection />
     </div>
   );
 }
