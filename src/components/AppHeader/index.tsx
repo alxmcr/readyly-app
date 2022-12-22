@@ -1,8 +1,10 @@
+import "./AppHeader.scss";
+
 export default function AppHeader() {
   return (
-    <header>
-      <h1>Aug 13th, 2022</h1>
-      <p>Saturday</p>
-    </header>
+    <section className="header">
+      <h1 className="header__title">Aug 13th, 2022</h1>
+      <p  className="header__day">Saturday</p>
+    </section>
   );
 }
