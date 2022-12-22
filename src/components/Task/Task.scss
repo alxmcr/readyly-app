@@ -1,9 +1,12 @@
 @import "../../variables";
 
 .task {
+  align-items: center;
   background-color: $light;
   border-radius: 0.625rem;
+  display: flex;
   height: 2.125rem;
+  padding: 0 .8125rem;
   &--completed {
     background-color: $secondary;
     color: $light;

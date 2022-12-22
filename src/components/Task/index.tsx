@@ -8,14 +8,14 @@ export default function Task({ task }: ITaskProps) {
   if (ta_is_completed) {
     return (
       <li id={ta_id.toString()} className="task task--completed">
-        {ta_description}
+        <span className="task__text">{ta_description}</span>
       </li>
     );
   }
 
   return (
     <li id={ta_id.toString()} className="task">
-      {ta_description}
+      <span className="task__text">{ta_description}</span>
     </li>
   );
 }
