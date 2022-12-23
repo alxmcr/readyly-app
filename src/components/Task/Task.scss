@@ -6,9 +6,13 @@
   border-radius: 0.625rem;
   display: flex;
   height: 2.125rem;
-  padding: 0 .8125rem;
+  padding: 0 0.8125rem;
   &--completed {
     background-color: $secondary;
     color: $light;
+  }
+  &__description {
+    text-align: center;
+    width: 100%;
   }
 }
