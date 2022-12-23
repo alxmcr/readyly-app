@@ -1,3 +1,7 @@
+@import "../../variables";
+
 .task-section {
-  padding: 1.1875rem 0;
+  border: 2px solid red;
+  height: $tasks-height-desktop;
+  padding: 1.875rem 0;
 }

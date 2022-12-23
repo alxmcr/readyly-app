@@ -1,10 +1,11 @@
 import { ITaskListProps } from "../../@types/appTypes";
 import Task from "../Task";
-import "./TaskList.scss"; 
+import TaskListEmpty from "../TaskListEmpty";
+import "./TaskList.scss";
 
 export default function TaskList({ tasks = [] }: ITaskListProps) {
   if (tasks?.length === 0) {
-    return <p>List is empty</p>
+    return <TaskListEmpty />;
   }
 
   return (
