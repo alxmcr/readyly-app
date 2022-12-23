@@ -9,7 +9,7 @@
   grid-template-rows: $header-height 2fr $task-form-section-height;
 }
 
-@media screen and (min-width: 320px) {
+@media screen and (min-width: 330px) {
   .home {
     width: $desktop-width;
   }
