@@ -4,11 +4,7 @@
   background-color: $primary;
   height: 100vh;
   margin: 0 auto;
-  width: $desktop-width;
-}
-
-@media screen and (max-width: 390px) {
-  .home {
-    width: $mobile-width;
-  }
+  width: 100%;
+  display: grid;
+  grid-template-rows: $header-height 2fr $task-form-section-height;
 }

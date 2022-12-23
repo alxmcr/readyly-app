@@ -5,6 +5,7 @@
   flex-direction: column;
   gap: 10px;
   padding: 1.1875rem 0;
+  width: 100%;
   &__button {
     align-items: center;
     background-color: $secondary;
@@ -15,6 +16,7 @@
     height: 2.125rem;
     justify-content: center;
     padding: 0 0.8125rem;
+    width: 100%;
     &:hover {
       background-color: $secondary-light;
     }
@@ -27,6 +29,7 @@
     height: 2.125rem;
     justify-content: center;
     padding: 0 0.8125rem;
+    width: 100%;
   }
   &__inputgroup {
     display: flex;
