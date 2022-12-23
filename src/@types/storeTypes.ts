@@ -1,4 +1,5 @@
 import { TASKS_ACTIONS } from "../helpers/contants";
+import { ITask } from "./appTypes";
 
 export interface ITasksState {
   tasks: ITask[];

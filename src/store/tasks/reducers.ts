@@ -1,12 +1,14 @@
-import { ITask } from "../../@types/appTypes";
+import { Reducer } from "react";
 import { ITasksState, ITasksAction } from "../../@types/storeTypes";
 import { TASKS_ACTIONS } from "../../helpers/contants";
 
-export const tasksInitialState: ITask[] = [];
+export const tasksInitialState: ITasksState = {
+  tasks: [],
+};
 
 export const tasksReducer: Reducer<ITasksState, ITasksAction> = (
-  state: ITasksState = tasksInitialState,
-  action: ITasksAction
+  state = tasksInitialState,
+  action
 ) => {
   switch (action?.type) {
     case TASKS_ACTIONS?.ADD:
@@ -15,10 +17,13 @@ export const tasksReducer: Reducer<ITasksState, ITasksAction> = (
     case TASKS_ACTIONS?.UPDATE:
       const taskToUpdate = action?.payload;
       const idTaskToUpdate = taskToUpdate?.ta_id;
-      const positionTaskToUpdate = state?.tasks?.find(
+      const positionTaskToUpdate = state?.tasks?.findIndex(
         (task) => task?.ta_id === idTaskToUpdate
       );
-      state[positionTaskToUpdate] = taskToUpdate;
+
+      if (positionTaskToUpdate > 0) {
+        state.tasks[positionTaskToUpdate] = taskToUpdate;
+      }
 
       return { ...state };
 
