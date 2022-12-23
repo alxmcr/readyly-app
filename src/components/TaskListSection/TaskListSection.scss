@@ -1,6 +1,7 @@
 @import "../../variables";
 
 .task-section {
+  background-color: $primary;
   border: 2px solid red;
   padding: 1.875rem 0;
   overflow-y: auto;
