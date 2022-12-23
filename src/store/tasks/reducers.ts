@@ -2,12 +2,8 @@ import { Reducer } from "react";
 import { ITasksState, ITasksAction } from "../../@types/storeTypes";
 import { TASKS_ACTIONS } from "../../helpers/contants";
 
-export const tasksInitialState: ITasksState = {
-  tasks: [],
-};
-
 export const tasksReducer: Reducer<ITasksState, ITasksAction> = (
-  state = tasksInitialState,
+  state,
   action
 ) => {
   switch (action?.type) {

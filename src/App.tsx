@@ -1,10 +1,13 @@
 import HomePage from "./pages/HomePage";
+import { TasksProvider } from "./providers/TasksProvider";
 
 function App() {
   return (
-    <div className="App">
-      <HomePage />
-    </div>
+    <TasksProvider>
+      <div className="App">
+        <HomePage />
+      </div>
+    </TasksProvider>
   );
 }
 
