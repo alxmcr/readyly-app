@@ -1,14 +1,14 @@
 @import "../../variables";
 
-.task-form-section {
-  padding: 0 $element-padding;
-  position: fixed;
-  bottom: 0;
+.home {
+  background-color: $primary;
+  height: 100vh;
+  margin: 0 auto;
   width: $desktop-width;
 }
 
 @media screen and (max-width: 390px) {
-  .task-form-section {
+  .home {
     width: $mobile-width;
   }
 }
