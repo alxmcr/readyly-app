@@ -18,3 +18,7 @@ export enum StatusOperation {
   ERROR = "error",
   IDLE = "idle",
 }
+
+export type ReactFCProps = {
+  children?: React.ReactNode;
+};
