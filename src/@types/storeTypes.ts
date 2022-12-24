@@ -2,6 +2,7 @@ import { TASKS_ACTIONS } from "../helpers/contants";
 import { ITask } from "./appTypes";
 
 export interface ITasksState {
+  isLoading: boolean;
   tasks: ITask[];
 }
 

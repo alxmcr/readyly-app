@@ -4,13 +4,14 @@ import { TaskService } from "../services/TaskService";
 
 export default function useTasks() {
   const [tasks, setTasks] = useState<ITask[]>([]);
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
     let ignore = false;
 
     if (!ignore) {
       const getTasks = async () => {
+        setIsLoading(true);
         const tasksService = new TaskService();
         const tasksResult = await tasksService.fetchTasks();
         setTasks(tasksResult);
