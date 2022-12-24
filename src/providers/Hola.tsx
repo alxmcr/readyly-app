@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Reducer } from "react";
 import { ReactFCProps } from "../@types/appTypes";
 import { HolaAction, HolaState, HolaStateContext } from "../@types/storeTypes";
 
@@ -15,12 +15,9 @@ const holaContextInitialState: HolaStateContext = {
 
 export const HolaContext = React.createContext(holaContextInitialState);
 
-const createHolaInit = (initNames: string[]) => {
+const initializerHolaReducer = (): HolaState => {
   return {
-    state: {
-      names: initNames,
-    },
-    dispatch: () => {},
+    names: ["holas...", "eee...."],
   };
 };
 
@@ -38,8 +35,11 @@ const holaReducer = (
 };
 
 export default function HolaProvider({ children }: ReactFCProps) {
-  const holaInit = { names: [] };
-  const [state, dispatch] = React.useReducer(holaReducer, holaInit);
+  const holaInit: HolaState = { names: [] };
+  const [state, dispatch] = React.useReducer<
+    Reducer<HolaState, HolaAction>,
+    HolaState
+  >(holaReducer, holaInit, initializerHolaReducer);
 
   const value = {
     state,

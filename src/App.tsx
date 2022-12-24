@@ -1,13 +1,16 @@
 import HomePage from "./pages/HomePage";
+import HolaProvider from "./providers/Hola";
 import { TasksProvider } from "./providers/TasksProvider";
 
 function App() {
   return (
-    <TasksProvider>
-      <div className="App">
-        <HomePage />
-      </div>
-    </TasksProvider>
+    <HolaProvider>
+      <TasksProvider>
+        <div className="App">
+          <HomePage />
+        </div>
+      </TasksProvider>
+    </HolaProvider>
   );
 }
 
