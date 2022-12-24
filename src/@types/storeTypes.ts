@@ -24,7 +24,7 @@ export interface HolaAction {
   payload: string;
 }
 
-export interface HolaContextState {
+export interface HolaStateContext {
   state: HolaState;
   dispatch: React.Dispatch<HolaAction>;
 }
