@@ -10,7 +10,7 @@ export interface ITasksAction {
   payload: ITask;
 }
 
-export interface ITasksContext {
+export interface ITasksStateContext {
   state: ITasksState;
   dispatch: React.Dispatch<ITasksAction>;
 }

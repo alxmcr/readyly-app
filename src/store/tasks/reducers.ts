@@ -1,9 +1,24 @@
 import { Reducer } from "react";
 import { ITasksState, ITasksAction } from "../../@types/storeTypes";
 import { TASKS_ACTIONS } from "../../helpers/contants";
+import { TaskService } from "../../services/TaskService";
+
+let initialTasks: ITasksState = {
+  tasks: [],
+};
+const initializerTasksReducer = async () => {
+  const tasksService = new TaskService();
+  const tasksResult = await tasksService.fetchTasks();
+
+  initialTasks = {
+    tasks: tasksResult,
+  };
+};
+
+initializerTasksReducer();
 
 export const tasksReducer: Reducer<ITasksState, ITasksAction> = (
-  state,
+  state = initialTasks,
   action
 ) => {
   switch (action?.type) {
