@@ -10,12 +10,14 @@ const initializerTasksReducer = async () => {
   const tasksService = new TaskService();
   const tasksResult = await tasksService.fetchTasks();
 
+  console.log({ tasksResult });
   initialTasks = {
     tasks: tasksResult,
   };
 };
 
 initializerTasksReducer();
+console.log({ initialTasks });
 
 export const tasksReducer: Reducer<ITasksState, ITasksAction> = (
   state = initialTasks,
