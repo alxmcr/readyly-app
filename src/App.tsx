@@ -3,10 +3,10 @@ import HomePage from "./pages/HomePage";
 import TasksProvider from "./providers/TasksProvider";
 
 function App() {
-  const { tasks } = useTasks();
+  const tasksState = useTasks();
 
   return (
-    <TasksProvider tasks={tasks}>
+    <TasksProvider tasksState={tasksState}>
       <div className="App">
         <HomePage />
       </div>

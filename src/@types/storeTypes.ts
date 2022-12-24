@@ -2,6 +2,7 @@ import { TASKS_ACTIONS } from "../helpers/contants";
 import { ITask } from "./appTypes";
 
 export interface ITasksState {
+  isLoading: boolean;
   tasks: ITask[];
 }
 
@@ -39,6 +40,6 @@ export type CountAction = {
 };
 
 export interface TasksProviderProps {
-  tasks: ITask[];
+  tasksState: ITasksState;
   children?: React.ReactNode;
 }

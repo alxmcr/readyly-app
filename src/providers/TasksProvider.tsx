@@ -4,6 +4,7 @@ import { tasksReducer } from "../store/tasks/reducers";
 
 const tasksContextInitialState: ITasksStateContext = {
   state: {
+    isLoading: false,
     tasks: [],
   },
   dispatch: () => {},
@@ -11,8 +12,11 @@ const tasksContextInitialState: ITasksStateContext = {
 
 export const TasksContext = React.createContext(tasksContextInitialState);
 
-export default function TasksProvider({ tasks, children }: TasksProviderProps) {
-  const [state, dispatch] = useReducer(tasksReducer, { tasks });
+export default function TasksProvider({
+  tasksState,
+  children,
+}: TasksProviderProps) {
+  const [state, dispatch] = useReducer(tasksReducer, tasksState);
 
   const value = {
     state,
