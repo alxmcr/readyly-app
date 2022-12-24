@@ -1,21 +1,24 @@
-function init(initialCount) {
+import { useReducer } from "react";
+import { CountAction, CountState } from "../@types/storeTypes";
+
+function init(initialCount: number) {
   return { count: initialCount };
 }
 
-function reducer(state, action) {
+function reducer(state: CountState, action: CountAction) {
   switch (action.type) {
     case "increment":
       return { count: state.count + 1 };
     case "decrement":
       return { count: state.count - 1 };
     case "reset":
-      return init(action.payload);
+      return init(action?.payload ? action?.payload : 0);
     default:
       throw new Error();
   }
 }
 
-function Counter({ initialCount }) {
+function Counter({ initialCount }: { initialCount: number }) {
   const [state, dispatch] = useReducer(reducer, initialCount, init);
   return (
     <>

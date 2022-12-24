@@ -28,3 +28,12 @@ export interface HolaStateContext {
   state: HolaState;
   dispatch: React.Dispatch<HolaAction>;
 }
+
+export type CountState = {
+  count: number;
+};
+
+export type CountAction = {
+  type: string;
+  payload?: number;
+};
