@@ -37,3 +37,8 @@ export type CountAction = {
   type: string;
   payload?: number;
 };
+
+export interface TasksProviderProps {
+  tasks: ITask[];
+  children?: React.ReactNode;
+}
