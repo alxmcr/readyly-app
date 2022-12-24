@@ -1,6 +1,5 @@
 import useTasks from "./hooks/useTasks";
 import HomePage from "./pages/HomePage";
-import HolaProvider from "./providers/Hola";
 import TasksProvider from "./providers/TasksProvider";
 
 function App() {
