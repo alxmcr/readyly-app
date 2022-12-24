@@ -16,10 +16,11 @@ export default function TasksProvider({
   tasksState,
   children,
 }: TasksProviderProps) {
+  console.log({ tasksState });
   const [state, dispatch] = useReducer(tasksReducer, tasksState);
 
   const value = {
-    state,
+    state: tasksState,
     dispatch,
   };
 
