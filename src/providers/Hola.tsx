@@ -1,11 +1,15 @@
 import { createContext } from "react";
 import { ReactFCProps } from "../@types/appTypes";
 
-const holaInitialState = {
+export interface HolaContextState {
+  names: string[];
+}
+
+const holaInitialState: HolaContextState = {
   names: [],
 };
 
-export const HolaContext = createContext(holaInitialState);
+export const HolaContext = createContext<HolaContextState>(holaInitialState);
 
 export default function HolaProvider({ children }: ReactFCProps) {
   const value = {
