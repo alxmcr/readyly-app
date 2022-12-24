@@ -5,6 +5,10 @@ import "./TaskListSection.scss";
 
 export default function TaskListSection() {
   const valueTasks = useContext(TasksContext);
+  
+  if(valueTasks?.state?.isLoading) {
+    return <p>Loading...</p>
+  }
 
   return (
     <section className="task-section">
