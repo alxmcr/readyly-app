@@ -14,3 +14,17 @@ export interface ITasksContext {
   state: ITasksState;
   dispatch: React.Dispatch<ITasksAction>;
 }
+
+export interface HolaState {
+  names: string[];
+}
+
+export interface HolaAction {
+  type: "hola/add" | "hola/update";
+  payload: string;
+}
+
+export interface HolaContextState {
+  state: HolaState;
+  dispatch: React.Dispatch<HolaAction>;
+}
