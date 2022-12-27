@@ -9,7 +9,7 @@
   &__button {
     align-items: center;
     background-color: $secondary;
-    border: none;
+    border: 1px solid $light;
     border-radius: 0.625rem;
     color: $light;
     display: flex;
@@ -19,6 +19,7 @@
     width: 100%;
     &:hover {
       background-color: $secondary-light;
+      border: none;
     }
   }
   &__input {
@@ -37,6 +38,7 @@
     gap: 10px;
   }
   &__label {
+    color: $light;
     font-weight: 400;
     font-size: 16px;
     line-height: 22px;
