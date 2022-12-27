@@ -3,7 +3,7 @@
 .header {
   background-color: $secondary;
   color: $light;
-  height: 6.5rem;
+  height: $header-height;
   padding: 1.1875rem $element-padding;
   &__day {
     font-style: normal;

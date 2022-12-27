@@ -1,11 +1,11 @@
 @import "../../variables";
 
 .home {
+  display: flex;
+  flex-direction: column;
   height: 100vh;
   margin: 0 auto;
   width: 100%;
-  display: grid;
-  grid-template-rows: $header-height 2fr $task-form-section-height;
 }
 
 @media screen and (min-width: 330px) {
