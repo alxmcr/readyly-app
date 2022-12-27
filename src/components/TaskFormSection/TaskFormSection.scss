@@ -2,7 +2,8 @@
 
 .task-form-section {
   background-color: $secondary;
-  padding: 0 $element-padding;
+  height: $task-form-section-height;
+  padding: $element-padding;
   position: fixed;
   bottom: 0;
   width: 100%;
