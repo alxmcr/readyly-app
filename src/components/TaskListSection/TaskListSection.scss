@@ -3,7 +3,7 @@
 .task-section {
   border: 5px solid red;
   background-color: $primary;
-  padding: 1.875rem 0;
+  flex-grow: 1;
   overflow-y: auto;
 
   &::-webkit-scrollbar-track {
