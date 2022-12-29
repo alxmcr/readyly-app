@@ -18,19 +18,22 @@ export default function Task({ task }: ITaskProps) {
       id={ta_id.toString()}
       className={ta_is_completed ? `task task--completed` : `task`}
     >
-      <input
-        type="checkbox"
-        name={`task__description-${ta_id}`}
-        id={`task__description-${ta_id}`}
-        className="task__status"
-        checked={ta_is_completed}
-        onChange={handlerUpdateStatus}
-      />
-      <label
-        htmlFor={`task__description-${ta_id}`}
-        className="task__description"
-      >
-        {ta_description}
+      <label htmlFor={`task__checkbox-${ta_id}`} className="task__checkbox">
+        <input
+          type="checkbox"
+          name={`task__checkbox-${ta_id}`}
+          id={`task__checkbox-${ta_id}`}
+          className="task__status"
+          checked={ta_is_completed}
+          onChange={handlerUpdateStatus}
+        />
+        {ta_is_completed ? (
+          <span className="task__icon-wrapper">Done</span>
+        ) : (
+          <span className="task__icon-wrapper"></span>
+        )}
+
+        <span className="task__description">{ta_description}</span>
       </label>
     </li>
   );

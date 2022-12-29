@@ -11,11 +11,20 @@
     background-color: $secondary;
     color: $light;
   }
-  &__description {
+  &__checkbox {
+    display: flex;
+    justify-content: space-between;
     text-align: center;
     width: 100%;
   }
+  &__description {
+    width: 95%;
+  }
+  &__icon-wrapper {
+    width: 5%;
+  }
   &__status {
     border-radius: 50%;
+    display: none;
   }
 }
