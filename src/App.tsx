@@ -5,6 +5,10 @@ import TasksProvider from "./providers/TasksProvider";
 function App() {
   const tasksState = useTasks();
 
+  if (tasksState?.isLoading) {
+    return <p>Loading...</p>;
+  }
+
   return (
     <TasksProvider tasksState={tasksState}>
       <div className="App">
