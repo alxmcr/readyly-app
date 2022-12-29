@@ -7,17 +7,22 @@ export const tasksReducer = (state: ITasksState, action: ITasksAction) => {
       return { ...state, tasks: [...state.tasks, action?.payload] };
 
     case TASKS_ACTIONS?.UPDATE:
-      const taskToUpdate = action?.payload;
-      const idTaskToUpdate = taskToUpdate?.ta_id;
-      const positionTaskToUpdate = state?.tasks?.findIndex(
-        (task) => task?.ta_id === idTaskToUpdate
-      );
-
-      if (positionTaskToUpdate > 0) {
-        state.tasks[positionTaskToUpdate] = taskToUpdate;
-      }
-
-      return { ...state };
+      const taskUpdated = action?.payload;
+      console.log({ taskUpdated });
+      console.log("state", state);
+      console.log("tasks", state?.tasks);
+      return {
+        ...state,
+        tasks: state?.tasks?.map((task) => {
+          console.log(`${task?.ta_id} - ${taskUpdated?.ta_id}`);
+          if (task?.ta_id === taskUpdated?.ta_id) {
+            console.log("updated!");
+            return taskUpdated;
+          } else {
+            return task;
+          }
+        }),
+      };
 
     default:
       return state;
