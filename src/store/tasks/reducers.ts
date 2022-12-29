@@ -8,15 +8,18 @@ export const tasksReducer = (state: ITasksState, action: ITasksAction) => {
 
     case TASKS_ACTIONS?.UPDATE:
       const taskUpdated = action?.payload;
+
+      const tasks = state?.tasks?.map((task) => {
+        if (task?.ta_id === taskUpdated?.ta_id) {
+          return taskUpdated;
+        } else {
+          return task;
+        }
+      });
+
       return {
         ...state,
-        tasks: state?.tasks?.map((task) => {
-          if (task?.ta_id === taskUpdated?.ta_id) {
-            return taskUpdated;
-          } else {
-            return task;
-          }
-        }),
+        tasks,
       };
 
     default:
