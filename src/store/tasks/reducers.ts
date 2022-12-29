@@ -2,15 +2,12 @@ import { ITasksState, ITasksAction } from "../../@types/storeTypes";
 import { TASKS_ACTIONS } from "../../helpers/contants";
 
 export const tasksReducer = (state: ITasksState, action: ITasksAction) => {
-  console.log("state", state);
   switch (action?.type) {
     case TASKS_ACTIONS?.ADD:
       return { ...state, tasks: [...state.tasks, action?.payload] };
 
     case TASKS_ACTIONS?.UPDATE:
       const taskUpdated = action?.payload;
-      console.log({ taskUpdated });
-
       console.log("tasks", state?.tasks);
       return {
         ...state,
