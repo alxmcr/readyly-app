@@ -16,9 +16,7 @@ export default function TasksProvider({
   tasksState,
   children,
 }: TasksProviderProps) {
-  console.log({ tasksState });
   const [state, dispatch] = useReducer(tasksReducer, tasksState);
-  console.log({ state });
 
   const value = {
     state: tasksState,

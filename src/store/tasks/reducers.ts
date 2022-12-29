@@ -8,7 +8,7 @@ export const tasksReducer = (state: ITasksState, action: ITasksAction) => {
 
     case TASKS_ACTIONS?.UPDATE:
       const taskUpdated = action?.payload;
-      console.log("tasks", state?.tasks);
+      console.log({ taskUpdated });
       return {
         ...state,
         tasks: state?.tasks?.map((task) => {
