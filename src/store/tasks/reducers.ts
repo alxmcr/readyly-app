@@ -8,13 +8,10 @@ export const tasksReducer = (state: ITasksState, action: ITasksAction) => {
 
     case TASKS_ACTIONS?.UPDATE:
       const taskUpdated = action?.payload;
-      console.log({ taskUpdated });
       return {
         ...state,
         tasks: state?.tasks?.map((task) => {
-          console.log(`${task?.ta_id} - ${taskUpdated?.ta_id}`);
           if (task?.ta_id === taskUpdated?.ta_id) {
-            console.log("updated!");
             return taskUpdated;
           } else {
             return task;
