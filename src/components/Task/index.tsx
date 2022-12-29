@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import { ITaskProps } from "../../@types/appTypes";
 import { TasksContext } from "../../providers/TasksProvider";
 import { updateTaskAction } from "../../store/tasks/actions";
+import TaskCompletedIcon from "../common/icons/TaskCompletedIcon";
 import "./Task.scss";
 
 export default function Task({ task }: ITaskProps) {
@@ -28,7 +29,9 @@ export default function Task({ task }: ITaskProps) {
           onChange={handlerUpdateStatus}
         />
         {ta_is_completed ? (
-          <span className="task__icon-wrapper">Done</span>
+          <span className="task__icon-wrapper">
+            <TaskCompletedIcon />
+          </span>
         ) : (
           <span className="task__icon-wrapper"></span>
         )}

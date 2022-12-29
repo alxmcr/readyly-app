@@ -1,10 +1,10 @@
-import CompleteIcon from "../common/icons/CompleteIcon";
+import ListEmptyIcon from "../common/icons/ListEmptyIcon";
 import "./TaskListEmpty.scss";
 
 export default function TaskListEmpty() {
   return (
     <div className="tasks--empty">
-      <CompleteIcon />
+      <ListEmptyIcon />
       <p className="tasks__message tasks__message--empty">
         Congrats! Your to-do list is empty!
       </p>

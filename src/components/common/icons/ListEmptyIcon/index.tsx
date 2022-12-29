@@ -1,4 +1,4 @@
-export default function CompleteIcon() {
+export default function ListEmptyIcon() {
   return (
     <svg
       width={225}
