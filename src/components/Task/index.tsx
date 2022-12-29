@@ -3,6 +3,7 @@ import { ITaskProps } from "../../@types/appTypes";
 import { TasksContext } from "../../providers/TasksProvider";
 import { updateTaskAction } from "../../store/tasks/actions";
 import TaskCompletedIcon from "../common/icons/TaskCompletedIcon";
+import TaskIncompleteIcon from "../common/icons/TaskIncompleteIcon";
 import "./Task.scss";
 
 export default function Task({ task }: ITaskProps) {
@@ -33,7 +34,9 @@ export default function Task({ task }: ITaskProps) {
             <TaskCompletedIcon />
           </span>
         ) : (
-          <span className="task__icon-wrapper"></span>
+          <span className="task__icon-wrapper">
+            <TaskIncompleteIcon />
+          </span>
         )}
 
         <span className="task__description">{ta_description}</span>
