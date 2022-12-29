@@ -10,7 +10,6 @@ export default function TaskForm() {
 
   const addNewTask = (e: FormEvent) => {
     e.preventDefault();
-    console.log("hola");
   };
 
   return (
