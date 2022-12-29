@@ -5,7 +5,7 @@ import { updateTaskAction } from "../../store/tasks/actions";
 import "./Task.scss";
 
 export default function Task({ task }: ITaskProps) {
-  const { state, dispatch } = useContext(TasksContext);
+  const { dispatch } = useContext(TasksContext);
   const { ta_id, ta_description, ta_is_completed } = task;
 
   const handlerUpdateStatus = (ev: React.ChangeEvent<HTMLInputElement>) => {
