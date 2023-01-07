@@ -1,7 +1,10 @@
-import { FormEvent, useState } from "react";
+import { FormEvent, useContext, useState } from "react";
+import { TasksContext } from "../../providers/TasksProvider";
+import { addTaskAction } from "../../store/tasks/actions";
 import "./TaskForm.scss";
 
 export default function TaskForm() {
+  const { dispatch } = useContext(TasksContext);
   const [description, setDescription] = useState("");
 
   const handlerDescription = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -10,6 +13,7 @@ export default function TaskForm() {
 
   const addNewTask = (e: FormEvent) => {
     e.preventDefault();
+    dispatch(addTaskAction(description));
   };
 
   return (
