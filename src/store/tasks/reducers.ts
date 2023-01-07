@@ -4,7 +4,7 @@ import { TASKS_ACTIONS } from "../../helpers/contants";
 export const tasksReducer = (state: ITasksState, action: ITasksAction) => {
   switch (action?.type) {
     case TASKS_ACTIONS?.ADD:
-      return { ...state, tasks: [...state.tasks, action?.payload] };
+      return { ...state, tasks: [action?.payload, ...state.tasks] };
 
     case TASKS_ACTIONS?.UPDATE:
       const taskUpdated = action?.payload;

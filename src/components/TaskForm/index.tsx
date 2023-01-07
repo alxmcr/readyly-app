@@ -14,6 +14,7 @@ export default function TaskForm() {
   const addNewTask = (e: FormEvent) => {
     e.preventDefault();
     dispatch(addTaskAction(description));
+    setDescription("")
   };
 
   return (
