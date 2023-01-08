@@ -17,7 +17,6 @@ export default function Task({ task }: ITaskProps) {
   };
 
   const handlerDeleteTask = () => {
-    console.log('Delete', task);
     dispatch(deleteTaskAction(task));
   };
 

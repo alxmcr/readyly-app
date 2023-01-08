@@ -13,7 +13,6 @@ export const tasksReducer = (state: ITasksState, action: ITasksAction) => {
 
     case TASKS_ACTIONS?.DELETE:
       const taskToDelete = action?.payload;
-      console.log({ taskToDelete });
 
       tasks = state?.tasks?.filter(
         (task) => task?.ta_id !== taskToDelete?.ta_id,
