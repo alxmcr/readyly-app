@@ -11,6 +11,11 @@
     background-color: $secondary;
     color: $light;
   }
+  &__button {
+    appearance: none;
+    background-color: transparent;
+    border: none;
+  }
   &__checkbox {
     display: flex;
     justify-content: space-between;
