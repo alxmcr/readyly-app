@@ -3,11 +3,8 @@ import useTasks from "./hooks/useTasks";
 import HomePage from "./pages/HomePage";
 import TasksProvider from "./providers/TasksProvider";
 
-export default function App() {
-  const tasksState: ITasksState = {
-    tasks: [],
-    isLoading: false,
-  };
+export default function AppWithContext() {
+  const tasksState: ITasksState = useTasks();
 
   if (tasksState?.isLoading) {
     return <p>Loading...</p>;
