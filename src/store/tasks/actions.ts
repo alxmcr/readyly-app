@@ -20,3 +20,10 @@ export const updateTaskAction = (taskUpdated: ITask): ITasksAction => {
     payload: taskUpdated,
   };
 };
+
+export const deleteTaskAction = (taskToDelete: ITask): ITasksAction => {
+  return {
+    type: TASKS_ACTIONS?.DELETE,
+    payload: taskToDelete,
+  };
+};

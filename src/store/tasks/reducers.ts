@@ -11,6 +11,20 @@ export const tasksReducer = (state: ITasksState, action: ITasksAction) => {
 
       return { ...state, tasks };
 
+    case TASKS_ACTIONS?.DELETE:
+      const taskToDelete = action?.payload;
+      console.log({ taskToDelete });
+
+      tasks = state?.tasks?.filter(
+        (task) => task?.ta_id !== taskToDelete?.ta_id,
+      );
+      window?.localStorage?.setItem(TASKS_KEY_ITEM, JSON.stringify(tasks));
+
+      return {
+        ...state,
+        tasks,
+      };
+
     case TASKS_ACTIONS?.UPDATE:
       const taskUpdated = action?.payload;
 

@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { ITaskProps } from '../../@types/appTypes';
 import { TasksContext } from '../../providers/TasksProvider';
-import { updateTaskAction } from '../../store/tasks/actions';
+import { deleteTaskAction, updateTaskAction } from '../../store/tasks/actions';
 import TaskCompletedIcon from '../common/icons/TaskCompletedIcon';
 import TaskDeleteIcon from '../common/icons/TaskDeleteIcon';
 import TaskIncompleteIcon from '../common/icons/TaskIncompleteIcon';
@@ -18,6 +18,7 @@ export default function Task({ task }: ITaskProps) {
 
   const handlerDeleteTask = () => {
     console.log('Delete', task);
+    dispatch(deleteTaskAction(task));
   };
 
   return (

@@ -7,7 +7,7 @@ export interface ITasksState {
 }
 
 export interface ITasksAction {
-  type: TASKS_ACTIONS.ADD | TASKS_ACTIONS.UPDATE;
+  type: TASKS_ACTIONS;
   payload: ITask;
 }
 
