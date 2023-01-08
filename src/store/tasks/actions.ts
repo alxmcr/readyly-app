@@ -7,7 +7,7 @@ export const addTaskAction = (description = ""): ITasksAction => {
   return {
     type: TASKS_ACTIONS?.ADD,
     payload: {
-      ta_id: Number(uuidv4()),
+      ta_id: uuidv4(),
       ta_is_completed: false,
       ta_description: description,
     },

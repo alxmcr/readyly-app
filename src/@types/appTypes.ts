@@ -1,5 +1,5 @@
 export interface ITask {
-  ta_id: number;
+  ta_id: string;
   ta_description: string;
   ta_is_completed: boolean;
 }
