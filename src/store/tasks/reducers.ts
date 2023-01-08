@@ -1,5 +1,5 @@
-import { ITasksState, ITasksAction } from "../../@types/storeTypes";
-import { TASKS_ACTIONS } from "../../helpers/contants";
+import { ITasksState, ITasksAction } from '../../@types/storeTypes';
+import { TASKS_ACTIONS } from '../../helpers/contants';
 
 export const tasksReducer = (state: ITasksState, action: ITasksAction) => {
   let tasks = [];

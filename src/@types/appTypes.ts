@@ -13,10 +13,10 @@ export interface ITaskListProps {
 }
 
 export enum StatusOperation {
-  PENDING = "pending",
-  SUCCESS = "success",
-  ERROR = "error",
-  IDLE = "idle",
+  PENDING = 'pending',
+  SUCCESS = 'success',
+  ERROR = 'error',
+  IDLE = 'idle',
 }
 
 export type ReactFCProps = {

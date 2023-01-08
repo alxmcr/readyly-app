@@ -1,5 +1,5 @@
-import ListEmptyIcon from "../common/icons/ListEmptyIcon";
-import "./TaskListEmpty.scss";
+import ListEmptyIcon from '../common/icons/ListEmptyIcon';
+import './TaskListEmpty.scss';
 
 export default function TaskListEmpty() {
   return (

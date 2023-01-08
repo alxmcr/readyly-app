@@ -1,7 +1,7 @@
-import { useEffect, useState } from "react";
-import { ITask } from "../@types/appTypes";
-import { ITasksState } from "../@types/storeTypes";
-import { TaskService } from "../services/TaskService";
+import { useEffect, useState } from 'react';
+import { ITask } from '../@types/appTypes';
+import { ITasksState } from '../@types/storeTypes';
+import { TaskService } from '../services/TaskService';
 
 export default function useTasks(): ITasksState {
   const [tasks, setTasks] = useState<ITask[]>([]);

@@ -1,5 +1,5 @@
-import TaskForm from "../TaskForm";
-import "./TaskFormSection.scss";
+import TaskForm from '../TaskForm';
+import './TaskFormSection.scss';
 
 export default function TaskFormSection() {
   return (

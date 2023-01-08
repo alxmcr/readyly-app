@@ -1,5 +1,5 @@
-import { useReducer } from "react";
-import { CountAction, CountState } from "../@types/storeTypes";
+import { useReducer } from 'react';
+import { CountAction, CountState } from '../@types/storeTypes';
 
 function init(initialCount: number) {
   return { count: initialCount };
@@ -7,11 +7,11 @@ function init(initialCount: number) {
 
 function reducer(state: CountState, action: CountAction) {
   switch (action.type) {
-    case "increment":
+    case 'increment':
       return { count: state.count + 1 };
-    case "decrement":
+    case 'decrement':
       return { count: state.count - 1 };
-    case "reset":
+    case 'reset':
       return init(action?.payload ? action?.payload : 0);
     default:
       throw new Error();
@@ -24,12 +24,12 @@ function Counter({ initialCount }: { initialCount: number }) {
     <>
       Count: {state.count}
       <button
-        onClick={() => dispatch({ type: "reset", payload: initialCount })}
+        onClick={() => dispatch({ type: 'reset', payload: initialCount })}
       >
         Reset
       </button>
-      <button onClick={() => dispatch({ type: "decrement" })}>-</button>
-      <button onClick={() => dispatch({ type: "increment" })}>+</button>
+      <button onClick={() => dispatch({ type: 'decrement' })}>-</button>
+      <button onClick={() => dispatch({ type: 'increment' })}>+</button>
     </>
   );
 }

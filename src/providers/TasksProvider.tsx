@@ -1,6 +1,6 @@
-import React, { useReducer } from "react";
-import { ITasksStateContext, TasksProviderProps } from "../@types/storeTypes";
-import { tasksReducer } from "../store/tasks/reducers";
+import React, { useReducer } from 'react';
+import { ITasksStateContext, TasksProviderProps } from '../@types/storeTypes';
+import { tasksReducer } from '../store/tasks/reducers';
 
 const tasksContextInitialState: ITasksStateContext = {
   state: {

@@ -1,10 +1,10 @@
-import React, { useContext } from "react";
-import { ITaskProps } from "../../@types/appTypes";
-import { TasksContext } from "../../providers/TasksProvider";
-import { updateTaskAction } from "../../store/tasks/actions";
-import TaskCompletedIcon from "../common/icons/TaskCompletedIcon";
-import TaskIncompleteIcon from "../common/icons/TaskIncompleteIcon";
-import "./Task.scss";
+import React, { useContext } from 'react';
+import { ITaskProps } from '../../@types/appTypes';
+import { TasksContext } from '../../providers/TasksProvider';
+import { updateTaskAction } from '../../store/tasks/actions';
+import TaskCompletedIcon from '../common/icons/TaskCompletedIcon';
+import TaskIncompleteIcon from '../common/icons/TaskIncompleteIcon';
+import './Task.scss';
 
 export default function Task({ task }: ITaskProps) {
   const { dispatch } = useContext(TasksContext);

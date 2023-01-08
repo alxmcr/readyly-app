@@ -1,7 +1,7 @@
-import { ITasksState } from "./@types/storeTypes";
-import useTasks from "./hooks/useTasks";
-import HomePage from "./pages/HomePage";
-import TasksProvider from "./providers/TasksProvider";
+import { ITasksState } from './@types/storeTypes';
+import useTasks from './hooks/useTasks';
+import HomePage from './pages/HomePage';
+import TasksProvider from './providers/TasksProvider';
 
 export default function AppWithContext() {
   const tasksState: ITasksState = useTasks();

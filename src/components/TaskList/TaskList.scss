@@ -1,9 +1,9 @@
-@import "../../variables";
+@import '../../variables';
 
 .tasks {
   display: flex;
   flex-direction: column;
-  gap: .6875rem;
+  gap: 0.6875rem;
   list-style: none;
   margin: 0;
   padding: 0;

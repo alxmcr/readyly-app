@@ -1,3 +1,3 @@
-export const convertLocalStorageToTasks = (tasksAsStr = "[]") => {
+export const convertLocalStorageToTasks = (tasksAsStr = '[]') => {
   return Array.from(tasksAsStr);
 };

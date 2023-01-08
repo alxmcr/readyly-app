@@ -1,9 +1,9 @@
-import { v4 as uuidv4 } from "uuid";
-import { ITask } from "../../@types/appTypes";
-import { ITasksAction } from "../../@types/storeTypes";
-import { TASKS_ACTIONS } from "../../helpers/contants";
+import { v4 as uuidv4 } from 'uuid';
+import { ITask } from '../../@types/appTypes';
+import { ITasksAction } from '../../@types/storeTypes';
+import { TASKS_ACTIONS } from '../../helpers/contants';
 
-export const addTaskAction = (description = ""): ITasksAction => {
+export const addTaskAction = (description = ''): ITasksAction => {
   return {
     type: TASKS_ACTIONS?.ADD,
     payload: {

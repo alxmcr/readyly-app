@@ -1,5 +1,5 @@
-import { TASKS_ACTIONS } from "../helpers/contants";
-import { ITask } from "./appTypes";
+import { TASKS_ACTIONS } from '../helpers/contants';
+import { ITask } from './appTypes';
 
 export interface ITasksState {
   isLoading: boolean;
@@ -21,7 +21,7 @@ export interface HolaState {
 }
 
 export interface HolaAction {
-  type: "hola/add" | "hola/update";
+  type: 'hola/add' | 'hola/update';
   payload: string;
 }
 

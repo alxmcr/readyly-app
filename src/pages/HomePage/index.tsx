@@ -1,7 +1,7 @@
-import AppHeader from "../../components/AppHeader";
-import TaskFormSection from "../../components/TaskFormSection";
-import TaskListSection from "../../components/TaskListSection";
-import "./HomePage.scss";
+import AppHeader from '../../components/AppHeader';
+import TaskFormSection from '../../components/TaskFormSection';
+import TaskListSection from '../../components/TaskListSection';
+import './HomePage.scss';
 
 export default function HomePage() {
   return (

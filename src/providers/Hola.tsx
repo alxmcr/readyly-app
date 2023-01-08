@@ -1,6 +1,6 @@
-import React, { Reducer } from "react";
-import { ReactFCProps } from "../@types/appTypes";
-import { HolaAction, HolaState, HolaStateContext } from "../@types/storeTypes";
+import React, { Reducer } from 'react';
+import { ReactFCProps } from '../@types/appTypes';
+import { HolaAction, HolaState, HolaStateContext } from '../@types/storeTypes';
 
 const holaInitialState: HolaState = {
   names: [],
@@ -17,16 +17,16 @@ export const HolaContext = React.createContext(holaContextInitialState);
 
 const initializerHolaReducer = (): HolaState => {
   return {
-    names: ["holas...", "eee...."],
+    names: ['holas...', 'eee....'],
   };
 };
 
 const holaReducer = (
   state: HolaState = holaInitialState,
-  action: HolaAction
+  action: HolaAction,
 ) => {
   switch (action?.type) {
-    case "hola/add":
+    case 'hola/add':
       return { ...state, names: [...state.names, action.payload] };
 
     default:
