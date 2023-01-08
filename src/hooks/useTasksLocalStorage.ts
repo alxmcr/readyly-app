@@ -10,13 +10,11 @@ export default function useTasksLocalStorage(keyItem = ''): ITasksState {
     let ignore = false;
 
     if (!ignore) {
-      const getTasks = async () => {
+      const getTasks = () => {
         setIsLoading(true);
-        const localStorageResult = await localStorage.getItem(keyItem);
+        const localStorageResult = localStorage.getItem(keyItem);
         const lsTasksParsed =
           localStorageResult === null ? [] : JSON.parse(localStorageResult);
-
-        console.log({ lsTasksParsed });
 
         setTasks(lsTasksParsed);
         setIsLoading(false);
