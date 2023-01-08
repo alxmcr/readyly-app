@@ -1,12 +1,11 @@
 import { ITasksState } from './@types/storeTypes';
+import { TASKS_KEY_ITEM } from './helpers/contants';
+import useTasksLocalStorage from './hooks/useTasksLocalStorage';
 import HomePage from './pages/HomePage';
 import TasksProvider from './providers/TasksProvider';
 
 export default function App() {
-  const tasksState: ITasksState = {
-    tasks: [],
-    isLoading: false,
-  };
+  const tasksState: ITasksState = useTasksLocalStorage(TASKS_KEY_ITEM);
 
   if (tasksState?.isLoading) {
     return <p>Loading...</p>;

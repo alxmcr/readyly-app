@@ -1,5 +1,5 @@
 import { ITasksState, ITasksAction } from '../../@types/storeTypes';
-import { TASKS_ACTIONS } from '../../helpers/contants';
+import { TASKS_ACTIONS, TASKS_KEY_ITEM } from '../../helpers/contants';
 
 export const tasksReducer = (state: ITasksState, action: ITasksAction) => {
   let tasks = [];
@@ -7,6 +7,7 @@ export const tasksReducer = (state: ITasksState, action: ITasksAction) => {
   switch (action?.type) {
     case TASKS_ACTIONS?.ADD:
       tasks = [action?.payload, ...state.tasks];
+      window?.localStorage?.setItem(TASKS_KEY_ITEM, JSON.stringify(tasks));
 
       return { ...state, tasks };
 
@@ -20,6 +21,7 @@ export const tasksReducer = (state: ITasksState, action: ITasksAction) => {
           return task;
         }
       });
+      window?.localStorage?.setItem(TASKS_KEY_ITEM, JSON.stringify(tasks));
 
       return {
         ...state,
