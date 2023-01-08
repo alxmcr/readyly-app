@@ -4,12 +4,5 @@
   background-color: $secondary;
   height: $task-form-section-height;
   padding: $element-padding;
-  bottom: 0;
   width: 100%;
-}
-
-@media screen and (min-width: 330px) {
-  .task-form-section {
-    width: $desktop-width;
-  }
 }
