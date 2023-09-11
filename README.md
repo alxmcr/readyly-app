@@ -44,6 +44,7 @@ Start the server
 
 - `"react"`: `"^18.2.0"`,
 - `"react-dom"`: `"^18.2.0"`,
+- `"date-fns"`: `"^2.30.0"`,
 - `"uuid"`: `"^9.0.0"`,
 - `"@types/react"`: `"^18.0.26"`,
 - `"@types/react-dom"`: `"^18.0.9"`,
@@ -57,9 +58,10 @@ Start the server
 
 ## Screenshots
 
-![image](https://github.com/alxmcr/readyly-app/assets/8689897/1383d13a-882f-4436-90a0-b72294ad1e91)
+![image](https://github.com/alxmcr/readyly-app/assets/8689897/0c162f7e-2467-4cd4-a326-13e7c70d784c)
 
-![image](https://github.com/alxmcr/readyly-app/assets/8689897/e3dc4e22-e2cc-4a8f-b09d-4e72b1855e80)
+![image](https://github.com/alxmcr/readyly-app/assets/8689897/d8bd8aa7-8d89-4b4d-beed-614b32615614)
+
 
 ## Demo
 
