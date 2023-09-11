@@ -7,7 +7,9 @@ Stay focused and productive. Don't forget your things to do.
 ## Features
 
 - Add a task
+- Save tasks on Localstorage
 - Delete a task
+- List all tasks
 - Mark a task as completed
 
 
@@ -55,12 +57,13 @@ Start the server
 
 ## Screenshots
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![image](https://github.com/alxmcr/readyly-app/assets/8689897/1383d13a-882f-4436-90a0-b72294ad1e91)
 
+![image](https://github.com/alxmcr/readyly-app/assets/8689897/e3dc4e22-e2cc-4a8f-b09d-4e72b1855e80)
 
 ## Demo
 
-[https://forecastzy-app.netlify.app/](https://forecastzy-app.netlify.app/)
+[https://readyly-app.netlify.app/](https://readyly-app.netlify.app/)
 
 
 ## Authors
