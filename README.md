@@ -44,6 +44,7 @@ Start the server
 
 - `"react"`: `"^18.2.0"`,
 - `"react-dom"`: `"^18.2.0"`,
+- `"date-fns"`: `"^2.30.0"`,
 - `"uuid"`: `"^9.0.0"`,
 - `"@types/react"`: `"^18.0.26"`,
 - `"@types/react-dom"`: `"^18.0.9"`,
